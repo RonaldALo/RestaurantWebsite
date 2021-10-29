@@ -592,6 +592,258 @@ html {
     }
 }
 
+.menu .box-container {
+    @include grid(30rem);
+    .box {
+        border-radius: .5rem;
+        background: $light-bg;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        img {
+            height: 10rem;
+        }
+        .content {
+            h3 {
+                font-size: 2rem;
+                color: $black;
+                padding-bottom: .5rem;
+            }
+            .price {
+                font-size: 1.8rem;
+                color: $green;
+            }
+        }
+    }
+}
+
+.order {
+    .icons-container {
+        @include grid(30rem);
+        margin-bottom: 2rem;
+        .icons {
+            text-align: center;
+            border-radius: .5rem;
+            padding: 2rem;
+            background: $light-bg;
+            img {
+                height: 7rem;
+            }
+            h3 {
+                font-size: 2rem;
+                color: $black;
+                margin-top: .5rem;
+            }
+        }
+    }
+    form {
+        background: $light-bg;
+        padding: 2rem;
+        border-radius: .5rem;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .inputbox {
+                width: 49%;
+                padding: .7rem 0;
+            }
+            span {
+                font-size: 1.7rem;
+                color: $light-color;
+            }
+            input,
+            textarea {
+                width: 100%;
+                padding: 1rem 1.2rem;
+                width: 100%;
+                border-radius: .5rem;
+                font-size: 1.5rem;
+                text-transform: none;
+                color: $black;
+            }
+            textarea {
+                height: 20rem;
+                resize: none;
+            }
+            .map {
+                width: 100%;
+                height: 100%;
+                border-radius: .5rem;
+            }
+        }
+    }
+}
+
+.blog .box-container {
+    @include grid(30rem);
+    .box {
+        overflow: hidden;
+        border-radius: .5rem;
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.2);
+                }
+                h3 {
+                    left: 1.5rem;
+                }
+            }
+        }
+        .image {
+            height: 25rem;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            h3 {
+                position: absolute;
+                top: 1rem;
+                left: -100%;
+                z-index: 10;
+                border-radius: .5rem;
+                background: $white;
+                color: $black;
+                font-size: 1.2rem;
+                padding: .5rem 1rem;
+                i {
+                    padding-right: .5rem;
+                    color: $green;
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            padding: 1.5rem 2rem;
+            background: $light-bg;
+            .tag {
+                padding-bottom: 1rem;
+                a {
+                    font-size: 1.5rem;
+                    color: $light-color;
+                    i {
+                        color: $green;
+                    }
+                }
+            }
+            h3 {
+                font-size: 2rem;
+                color: $black;
+            }
+            p {
+                font-size: 1.4rem;
+                color: $light-color;
+                padding: 1rem 0;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 2rem 9%;
+    background: $light-bg;
+    .newsletter {
+        text-align: center;
+        margin-top: 2rem;
+        h3 {
+            font-size: 2.5rem;
+            color: $black;
+            padding-bottom: 1rem;
+        }
+        form {
+            max-width: 70rem;
+            margin: 1rem auto;
+            max-width: 70rem;
+            display: flex;
+            border-radius: .5rem;
+            overflow: hidden;
+            input[type='email'] {
+                height: 100%;
+                width: 100%;
+                padding: 1rem 1.2rem;
+                font-size: 1.6rem;
+                color: $black;
+                text-transform: none;
+            }
+            input[type='submit'] {
+                padding: 0 2rem;
+                font-size: 1.6rem;
+                color: $white;
+                background: $green;
+                cursor: pointer;
+                &:hover {
+                    background: $black;
+                }
+            }
+        }
+    }
+    .box-container {
+        @include grid(25rem);
+        .box {
+            h3 {
+                font-size: 2.2rem;
+                color: $black;
+                padding: 1rem 0;
+            }
+            p {
+                display: block;
+                font-size: 1.4rem;
+                color: $light-color;
+                padding: 1rem 0;
+            }
+            a {
+                display: block;
+                font-size: 1.4rem;
+                color: $light-color;
+                padding: 1rem 0;
+                &:hover {
+                    color: $green;
+                    i {
+                        padding-right: 2rem;
+                    }
+                }
+                i {
+                    padding: .5rem;
+                    color: $green;
+                }
+            }
+        }
+    }
+    .bottom {
+        padding-top: 1rem;
+        text-align: center;
+        .share {
+            margin: 1.5rem 0;
+            a {
+                height: 4.5rem;
+                width: 4.5rem;
+                line-height: 4.5rem;
+                font-size: 2rem;
+                border-radius: 50%;
+                margin: 0 .3rem;
+                color: $white;
+                background: $green;
+                &:hover {
+                    background: $black;
+                }
+            }
+        }
+        .credit {
+            font-size: 1.5rem;
+            color: $light-color;
+            padding: 1rem;
+            span {
+                color: $green;
+            }
+        }
+    }
+}
+
 //media queries
 @media(max-width: 991px) {
     html {
@@ -601,6 +853,9 @@ html {
         padding: 2rem;
     }
     section {
+        padding: 2rem;
+    }
+    .footer {
         padding: 2rem;
     }
 }
@@ -633,6 +888,9 @@ html {
             right: 0;
             width: 130%;
         }
+    }
+    .order form .flex .inputbox {
+        width: 100%;
     }
 }
 
